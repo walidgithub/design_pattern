@@ -1,11 +1,13 @@
 import 'package:design_pattern/design_pattern/creational/abstract_factory/slider_widgets/slider.dart';
 import 'package:design_pattern/design_pattern/creational/abstract_factory/switch_widgets/switch.dart';
-import 'package:design_pattern/design_pattern/creational/abstract_factory/widget_factory.dart';
+
 import 'package:flutter/material.dart';
 
 import 'activity_widgets/activity_indicator.dart';
-import 'cupertino_widget_factory.dart';
-import 'material_widget_factory.dart';
+
+import 'factory/cupertino_widget_factory.dart';
+import 'factory/material_widget_factory.dart';
+import 'factory/widget_factory.dart';
 
 class AbstractFactoryExample extends StatefulWidget {
   @override
@@ -34,6 +36,20 @@ class _AbstractFactoryExampleState extends State<AbstractFactoryExample> {
   void initState() {
     super.initState();
     _createWidgets();
+  }
+
+  void _createWidgets() {
+    _activityIndicator =
+        widgetsFactoryList[_selectedFactoryIndex].createActivityIndicator();
+    _slider = widgetsFactoryList[_selectedFactoryIndex].createSlider();
+    _switch = widgetsFactoryList[_selectedFactoryIndex].createSwitch();
+  }
+
+  void _setSelectedFactoryIndex(int index) {
+    setState(() {
+      _selectedFactoryIndex = index;
+      _createWidgets();
+    });
   }
 
   void _setSliderValue(double value) {
