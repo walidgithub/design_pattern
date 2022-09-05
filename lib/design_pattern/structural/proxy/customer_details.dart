@@ -5,9 +5,9 @@ class CustomerDetails {
   final String position;
 
   const CustomerDetails(
-      this.customerId,
-      this.email,
-      this.hobby,
-      this.position,
-      );
+    this.customerId,
+    this.email,
+    this.hobby,
+    this.position,
+  );
 }

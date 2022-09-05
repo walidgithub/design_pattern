@@ -1,7 +1,7 @@
 import 'package:faker/faker.dart';
 
 import 'customer_details.dart';
-import 'customer_details_service.dart';
+import 'i_customer_details_service.dart';
 
 class CustomerDetailsService implements ICustomerDetailsService {
   @override

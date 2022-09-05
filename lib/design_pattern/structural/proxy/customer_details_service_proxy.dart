@@ -1,5 +1,5 @@
 import 'customer_details.dart';
-import 'customer_details_service.dart';
+import 'i_customer_details_service.dart';
 
 class CustomerDetailsServiceProxy implements ICustomerDetailsService {
   final ICustomerDetailsService service;
@@ -11,7 +11,7 @@ class CustomerDetailsServiceProxy implements ICustomerDetailsService {
   @override
   Future<CustomerDetails> getCustomerDetails(String id) async {
     if (customerDetailsCache.containsKey(id)) {
-      return customerDetailsCache[id];
+      return customerDetailsCache[id]!;
     }
 
     var customerDetails = await service.getCustomerDetails(id);
