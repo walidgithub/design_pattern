@@ -1,3 +1,6 @@
+import 'package:design_pattern/design_pattern/structural/bridge/repository/orders_repository.dart';
+import 'package:design_pattern/design_pattern/structural/bridge/storage/file_storage.dart';
+import 'package:design_pattern/design_pattern/structural/bridge/storage/i_storage.dart';
 import 'package:design_pattern/design_pattern/structural/bridge/storage/sql_storage.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +45,7 @@ class _BridgeExampleState extends State<BridgeExample> {
   }
 
   void _addCustomer() {
-    _customersRepository.save(Customer());
+    _customersRepository!.save(Customer());
     setState(() {
       _customers = _customersRepository.getAll();
     });
