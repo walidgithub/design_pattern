@@ -1,4 +1,4 @@
-import '../file_types/file.dart';
+import '../file.dart';
 
 class AudioFile extends File {
   const AudioFile({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../i_file.dart';
+import 'i_file.dart';
 
 class File extends StatelessWidget implements IFile {
   final String title;
