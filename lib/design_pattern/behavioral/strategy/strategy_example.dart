@@ -20,6 +20,7 @@ class _StrategyExampleState extends State<StrategyExample> {
     ParcelTerminalShippingStrategy(),
     PriorityShippingStrategy(),
   ];
+
   int _selectedStrategyIndex = 0;
   Order _order = Order();
 
