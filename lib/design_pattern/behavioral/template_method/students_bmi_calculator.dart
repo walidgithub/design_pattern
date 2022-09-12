@@ -19,7 +19,7 @@ abstract class StudentsBmiCalculator {
   }
 
   // Hook methods
-
+  // Hook methods provide a way to extend behavior of programs at runtime.
   List<Student> doStudentsFiltering(List<Student> studentList) {
     return studentList;
   }
